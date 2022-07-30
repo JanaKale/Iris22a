@@ -1,60 +1,22 @@
 package com.qa.base;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.time.Duration;
-import java.util.Properties;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-import com.qa.util.TestUtil;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.qa.keywords.Keyword;
 
 public class TestBase {
-	public static WebDriver driver;
-	public static Properties prop;
-
-	public TestBase() {
-		try {
-			prop = new Properties();
-			FileInputStream	fis = new FileInputStream("./src/main/java/com/qa/config/config.properties");
-			prop.load(fis);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
+	
+	@BeforeMethod
+	public void setUp(@Optional("chrome") String browserName) {
+		Keyword.initialization(browserName);
 	}
-
-	public static void initialization() {
-		String browserName = prop.getProperty("browser");
-		switch (browserName.toLowerCase()) {
-		case "chrome":
-			ChromeOptions option = new ChromeOptions();
-			option.addArguments("--disable-notifications");
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver(option);
-			break;
-		case "edge":
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
-			break;
-		case "firefox":
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-		}
-		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.PAGELOADTIMEOUT));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.IMPLICITWAIT));
-		driver.manage().deleteAllCookies();
-		
-		driver.get(prop.getProperty("url"));
+	@AfterMethod
+	public void tearDown() {
+		Keyword.driver.quit();
 	}
+	
+
+	
 }

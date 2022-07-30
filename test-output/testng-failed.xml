@@ -6,8 +6,8 @@
       <class name="com.qa.pagetests.LoginPageTest">
         <methods>
           <include name="verifyLoginPageTitle"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.qa.pagetests.LoginPageTest -->
     </classes>

@@ -9,27 +9,16 @@ import com.qa.base.TestBase;
 import com.qa.pages.LoginPage;
 
 public class LoginPageTest extends TestBase {
-	static LoginPage loginpage;
-
-	public LoginPageTest() {
-		super();
-	}
-
-	@BeforeMethod
-	public void setUp() {
-		initialization();
-	}
-
+	
+	
 	@Test
 	public void verifyLoginPageTitle() {
-		loginpage = new LoginPage();
-		String title=loginpage.validateLoginPageTitle();
-		Assert.assertEquals(title, "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
+		LoginPage loginpage = new LoginPage();
+		String expTitle="Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
+		String actTitle=loginpage.validateLoginPageTitle();
+		Assert.assertEquals(actTitle,expTitle ,"Expected Title didn't match"+actTitle);
 	}
 
-	@AfterMethod
-	public static void tearDown() {
-		driver.quit();
-	}
+	
 
 }
