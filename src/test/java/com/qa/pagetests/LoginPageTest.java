@@ -9,7 +9,9 @@ import com.qa.base.TestBase;
 import com.qa.pages.LoginPage;
 
 public class LoginPageTest extends TestBase {
-	
+	/*
+	 * @author Kale Jana
+	 */
 	
 	@Test
 	public void verifyLoginPageTitle() {

@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropUtility {
+	/*
+	 * @author Kale Jana
+	 */
 	public static Properties prop = new Properties();
 	public static FileInputStream fis=null;
 	public static String getValue(String filePath, String key) {

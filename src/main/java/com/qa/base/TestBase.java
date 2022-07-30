@@ -7,6 +7,9 @@ import org.testng.annotations.Optional;
 import com.qa.keywords.Keyword;
 
 public class TestBase {
+	/*
+	 * @author Kale Jana
+	 */
 	
 	@BeforeMethod
 	public void setUp(@Optional("chrome") String browserName) {
