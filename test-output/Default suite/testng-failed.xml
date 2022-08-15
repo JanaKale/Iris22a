@@ -5,9 +5,9 @@
     <classes>
       <class name="com.qa.pagetests.HomePageTest">
         <methods>
+          <include name="verifyPageSource"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifyHomePageTitle"/>
         </methods>
       </class> <!-- com.qa.pagetests.HomePageTest -->
     </classes>

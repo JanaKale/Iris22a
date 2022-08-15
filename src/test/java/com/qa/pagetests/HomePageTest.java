@@ -11,12 +11,20 @@ public class HomePageTest extends TestBase {
 	 * @author Kale Jana
 	 */
 	
-	@Test
+	@Test(priority=0)
 	public void verifyHomePageTitle() {
 		HomePage Homepage = new HomePage();
-		String expTitle="nopCommerce demo store 1";
+		String expTitle="nopCommerce demo store";
 		String actTitle=Homepage.validateHomePageTitle();
 		Assert.assertEquals(actTitle,expTitle ,"Expected Title didn't match "+actTitle);
+		
+	}
+	@Test(priority=1)
+	public void verifyPageSource(){
+		HomePage Homepage = new HomePage();
+		Homepage.validatePageSource();
+		boolean act=Homepage.validatePageSource().contains("nopCommercedemo store");
+		Assert.assertTrue(act);
 	}
 
 	
