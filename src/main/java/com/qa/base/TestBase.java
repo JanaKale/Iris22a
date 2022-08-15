@@ -14,6 +14,7 @@ public class TestBase {
 	@BeforeMethod
 	public void setUp(@Optional("chrome") String browserName) {
 		Keyword.initialization(browserName);
+		System.out.println("hello");
 	}
 	@AfterMethod
 	public void tearDown() {
