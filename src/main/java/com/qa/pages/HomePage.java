@@ -3,9 +3,9 @@ package com.qa.pages;
 import com.qa.base.TestBase;
 import com.qa.keywords.Keyword;
 
-public class LoginPage extends TestBase {
+public class HomePage extends TestBase {
 
-	public String validateLoginPageTitle() {
+	public String validateHomePageTitle() {
 		return Keyword.driver.getTitle();
 
 	}
