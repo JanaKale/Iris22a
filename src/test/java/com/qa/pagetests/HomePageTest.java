@@ -8,6 +8,7 @@ import com.qa.pages.HomePage;
 
 public class HomePageTest extends TestBase {
 	/*
+	 * 
 	 * @author Kale Jana
 	 */
 	
@@ -23,7 +24,7 @@ public class HomePageTest extends TestBase {
 	public void verifyPageSource(){
 		HomePage Homepage = new HomePage();
 		Homepage.validatePageSource();
-		boolean act=Homepage.validatePageSource().contains("nopCommercedemo store");
+		boolean act=Homepage.validatePageSource().contains("nopCommerce demo store");
 		Assert.assertTrue(act);
 	}
 

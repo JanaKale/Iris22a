@@ -26,6 +26,7 @@ public class Keyword extends TestBase{
 		case "chrome":
 			ChromeOptions option = new ChromeOptions();
 			option.addArguments("--disable-notifications");
+			option.addArguments("--start-maximized");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(option);
 			break;
@@ -37,7 +38,6 @@ public class Keyword extends TestBase{
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
-		driver.manage().window().maximize();
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.PAGELOADTIMEOUT));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.IMPLICITWAIT));
 		driver.manage().deleteAllCookies();
