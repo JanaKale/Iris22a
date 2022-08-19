@@ -2,6 +2,7 @@ package com.qa.keywords;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -44,10 +45,15 @@ public class Keyword extends TestBase{
 		
 		driver.get(PropUtility.getEnvDetails("url"));
 	}
-	public static void click(WebElement element) {
-		element.click();
+	public static void click(By click ) {
+	 driver.switchTo().frame(0);
+	 driver.findElement(click).click();
 	}
 	public static void sendKeys(WebElement element, String keysTosend) {
 		element.sendKeys(keysTosend);
+	}
+	public static void launchUrl(String url) {
+		driver.get(url);
+		System.out.println("URL is launch: " + url);
 	}	
 }

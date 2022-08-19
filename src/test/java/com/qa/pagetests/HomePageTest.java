@@ -1,9 +1,10 @@
 package com.qa.pagetests;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.qa.base.TestBase;
+import com.qa.keywords.Keyword;
 import com.qa.pages.HomePage;
 
 public class HomePageTest extends TestBase {
@@ -26,8 +27,13 @@ public class HomePageTest extends TestBase {
 		Homepage.validatePageSource();
 		boolean act=Homepage.validatePageSource().contains("nopCommerce demo store");
 		Assert.assertTrue(act);
+		
 	}
+	@Test(priority=2)
+	public void clickonRegister() {
+	Keyword.launchUrl("https://frontend.nopcommerce.com/");
+	Keyword.click(By.xpath("//a[@class='ico-register']"));
 
 	
-
+	}
 }

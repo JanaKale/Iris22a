@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-15T18:12:04 IST" name="Default suite" finished-at="2022-08-15T18:12:12 IST" duration-ms="7117">
+  <suite started-at="2022-08-19T13:49:43 IST" name="Default suite" finished-at="2022-08-19T13:50:01 IST" duration-ms="18387">
     <groups>
     </groups>
-    <test started-at="2022-08-15T18:12:04 IST" name="Default test" finished-at="2022-08-15T18:12:12 IST" duration-ms="7117">
+    <test started-at="2022-08-19T13:49:43 IST" name="Default test" finished-at="2022-08-19T13:50:01 IST" duration-ms="18387">
       <class name="com.qa.pagetests.HomePageTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.qa.pagetests.HomePageTest@15c43bd9]" started-at="2022-08-15T18:12:04 IST" name="setUp" finished-at="2022-08-15T18:12:11 IST" duration-ms="6755" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.qa.pagetests.HomePageTest@3d74bf60]" started-at="2022-08-19T13:49:43 IST" name="setUp" finished-at="2022-08-19T13:49:54 IST" duration-ms="11304" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,77 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyPageSource()[pri:1, instance:com.qa.pagetests.HomePageTest@15c43bd9]" started-at="2022-08-15T18:12:11 IST" name="verifyPageSource" finished-at="2022-08-15T18:12:11 IST" duration-ms="97" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=104.0.5112.81)
-Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
-System info: host: 'DESKTOP-7R54CV9', ip: '192.168.109.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5b2c469647c702861f44d5c9d245a4c3, getPageSource {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55661}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55661/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5b2c469647c702861f44d5c9d245a4c3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=104.0.5112.81)
-Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
-System info: host: 'DESKTOP-7R54CV9', ip: '192.168.109.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5b2c469647c702861f44d5c9d245a4c3, getPageSource {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55661}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55661/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5b2c469647c702861f44d5c9d245a4c3
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:610)
-at org.openqa.selenium.remote.RemoteWebDriver.getPageSource(RemoteWebDriver.java:413)
-at com.qa.pages.HomePage.validatePageSource(HomePage.java:18)
-at com.qa.pagetests.HomePageTest.verifyPageSource(HomePageTest.java:26)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        <test-method signature="clickonRegister()[pri:2, instance:com.qa.pagetests.HomePageTest@3d74bf60]" started-at="2022-08-19T13:49:54 IST" name="clickonRegister" finished-at="2022-08-19T13:50:01 IST" duration-ms="6768" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyPageSource -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.pagetests.HomePageTest@15c43bd9]" started-at="2022-08-15T18:12:11 IST" name="tearDown" finished-at="2022-08-15T18:12:12 IST" duration-ms="197" status="PASS">
+        </test-method> <!-- clickonRegister -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.pagetests.HomePageTest@3d74bf60]" started-at="2022-08-19T13:50:01 IST" name="tearDown" finished-at="2022-08-19T13:50:01 IST" duration-ms="267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
