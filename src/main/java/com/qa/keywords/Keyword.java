@@ -50,4 +50,14 @@ public class Keyword extends TestBase{
 	public static void sendKeys(WebElement element, String keysTosend) {
 		element.sendKeys(keysTosend);
 	}	
+	public static void switchToFrame(int index) {
+		driver.switchTo().frame(index);
+	}
+	public static void switchToFrame(String idORName) {
+		driver.switchTo().frame(idORName);
+	}
+	public static void switchToFrame(WebElement element) {
+		driver.switchTo().frame(element);
+	}
+
 }

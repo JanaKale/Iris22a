@@ -5,7 +5,7 @@
     <classes>
       <class name="com.qa.pagetests.HomePageTest">
         <methods>
-          <include name="verifyPageSource"/>
+          <include name="verifyRegisterBtnIsClickable"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
