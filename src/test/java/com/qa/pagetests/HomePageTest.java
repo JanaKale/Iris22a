@@ -1,13 +1,16 @@
 package com.qa.pagetests;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.qa.base.TestBase;
+import com.qa.keywords.Keyword;
 import com.qa.pages.HomePage;
+import com.qa.pages.RegistrationPage;
 
 public class HomePageTest extends TestBase {
 	/*
+	 * 
 	 * @author Kale Jana
 	 */
 
@@ -28,5 +31,11 @@ public class HomePageTest extends TestBase {
 		Assert.assertTrue(act);
 	}
 
-
+	@Test(priority = 2)
+	public void clickonRegister() {
+		HomePage Homepage = new HomePage();
+		RegistrationPage reg=Homepage.clickOnRegister();
+		boolean result=reg.registrationPageTitleIsDisplayed();
+		Assert.assertTrue(result);
+	}
 }

@@ -2,6 +2,7 @@ package com.qa.keywords;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -26,6 +27,7 @@ public class Keyword extends TestBase{
 		case "chrome":
 			ChromeOptions option = new ChromeOptions();
 			option.addArguments("--disable-notifications");
+			option.addArguments("--start-maximized");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(option);
 			break;
@@ -37,19 +39,16 @@ public class Keyword extends TestBase{
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
-		driver.manage().window().maximize();
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.PAGELOADTIMEOUT));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.IMPLICITWAIT));
 		driver.manage().deleteAllCookies();
 		
 		driver.get(PropUtility.getEnvDetails("url"));
 	}
-	public static void click(WebElement element) {
-		element.click();
-	}
+	
 	public static void sendKeys(WebElement element, String keysTosend) {
 		element.sendKeys(keysTosend);
-	}	
+	}
 	public static void switchToFrame(int index) {
 		driver.switchTo().frame(index);
 	}

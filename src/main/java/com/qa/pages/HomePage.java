@@ -9,20 +9,27 @@ import com.qa.keywords.Keyword;
 
 public class HomePage extends TestBase {
 
-	@FindBy(css=".ico-register")
 	public WebElement registerBtn;
 
-	@FindBy(css = ".page-title h1")
-	public WebElement registrationPageTitle;
+	
+	
+	public HomePage() {
+		Keyword.switchToFrame(0);
+		registerBtn=Keyword.driver.findElement(By.cssSelector(".ico-register"));
+		
+	}
 
 	public String validateHomePageTitle() {
 		return Keyword.driver.getTitle();
-
 	}
+
 
 	public String validatePageSource() {
 		return Keyword.driver.getPageSource();
+	}	
+	public RegistrationPage clickOnRegister() {
+		registerBtn.click();
+		return new RegistrationPage();
 	}
-	
-	
 }
+

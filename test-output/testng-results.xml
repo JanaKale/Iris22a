@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-16T18:15:49 IST" name="Default suite" finished-at="2022-08-16T18:16:26 IST" duration-ms="37068">
+  <suite started-at="2022-08-19T15:54:48 IST" name="Default suite" finished-at="2022-08-19T15:55:08 IST" duration-ms="20027">
     <groups>
     </groups>
-    <test started-at="2022-08-16T18:15:49 IST" name="Default test" finished-at="2022-08-16T18:16:26 IST" duration-ms="37068">
+    <test started-at="2022-08-19T15:54:48 IST" name="Default test" finished-at="2022-08-19T15:55:08 IST" duration-ms="20027">
       <class name="com.qa.pagetests.HomePageTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.qa.pagetests.HomePageTest@4de4b452]" started-at="2022-08-16T18:15:49 IST" name="setUp" finished-at="2022-08-16T18:16:26 IST" duration-ms="36603" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.qa.pagetests.HomePageTest@4de4b452]" started-at="2022-08-19T15:54:48 IST" name="setUp" finished-at="2022-08-19T15:55:06 IST" duration-ms="17676" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,73 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegisterBtnIsClickable()[pri:0, instance:com.qa.pagetests.HomePageTest@4de4b452]" started-at="2022-08-16T18:16:26 IST" name="verifyRegisterBtnIsClickable" finished-at="2022-08-16T18:16:26 IST" duration-ms="106" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchFrameException">
-            <message>
-              <![CDATA[no such frame
-  (Session info: chrome=104.0.5112.81)
-Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
-System info: host: 'DESKTOP-S7SOFT1', ip: '192.168.43.49', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b24623c5021d115934bf9edce5978e94, switchToFrame {id=0}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Shree\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58907}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58907/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b24623c5021d115934bf9edce5978e94]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchFrameException: no such frame
-  (Session info: chrome=104.0.5112.81)
-Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
-System info: host: 'DESKTOP-S7SOFT1', ip: '192.168.43.49', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b24623c5021d115934bf9edce5978e94, switchToFrame {id=0}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Shree\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58907}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58907/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b24623c5021d115934bf9edce5978e94
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:1027)
-at com.qa.pages.HomePage.clickonRegisterBtn(HomePage.java:28)
-at com.qa.pagetests.HomePageTest.verifyRegisterBtnIsClickable(HomePageTest.java:33)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchFrameException -->
+        <test-method signature="clickonRegister()[pri:2, instance:com.qa.pagetests.HomePageTest@4de4b452]" started-at="2022-08-19T15:55:06 IST" name="clickonRegister" finished-at="2022-08-19T15:55:08 IST" duration-ms="2030" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyRegisterBtnIsClickable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.pagetests.HomePageTest@4de4b452]" started-at="2022-08-16T18:16:26 IST" name="tearDown" finished-at="2022-08-16T18:16:26 IST" duration-ms="283" status="PASS">
+        </test-method> <!-- clickonRegister -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.pagetests.HomePageTest@4de4b452]" started-at="2022-08-19T15:55:08 IST" name="tearDown" finished-at="2022-08-19T15:55:08 IST" duration-ms="279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
